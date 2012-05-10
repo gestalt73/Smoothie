@@ -46,9 +46,9 @@ class Stepper : public Module {
         int config_step_timer( int cycles );
 
         Block* current_block;
-        int counters[3];
-        int stepped[3]; 
-        int offsets[3]; 
+        int64_t counters[3];
+        int64_t stepped[3]; 
+        int64_t offsets[3]; 
         float counter_alpha;
         float counter_beta;
         float counter_gamma;
