@@ -32,7 +32,7 @@ class Block {
         void debug(Kernel* kernel);
         void append_gcode(Gcode* gcode);
         void pop_and_execute_gcode(Kernel* &kernel);
-        double get_duration_left(unsigned int already_taken_steps);
+        double get_duration_left(uint64_t already_taken_steps);
         void take();
         void release();
         void ready();
@@ -41,8 +41,8 @@ class Block {
         vector<double> travel_distances;
         vector<Gcode> gcodes;
         
-        unsigned int   steps[3];           // Number of steps for each axis for this block
-        unsigned int   steps_event_count;  // Steps for the longest axis
+        uint64_t   steps[3];           // Number of steps for each axis for this block
+        uint64_t   steps_event_count;  // Steps for the longest axis
         unsigned int   nominal_rate;       // Nominal rate in steps per minute
         float          nominal_speed;      // Nominal speed in mm per minute
         float          millimeters;        // Distance for this move

@@ -124,7 +124,7 @@ void Stepper::on_block_begin(void* argument){
 
 // Current block is discarded
 void Stepper::on_block_end(void* argument){
-    Block* block  = static_cast<Block*>(argument);
+    //Block* block  = static_cast<Block*>(argument);
     this->current_block = NULL; //stfu !
 }
 
