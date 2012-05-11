@@ -49,9 +49,6 @@ class Stepper : public Module {
         int64_t counters[3];
         int64_t stepped[3]; 
         int64_t offsets[3]; 
-        float counter_alpha;
-        float counter_beta;
-        float counter_gamma;
         int step_events_completed; 
         unsigned int out_bits; 
         double trapezoid_adjusted_rate;
