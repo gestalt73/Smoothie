@@ -46,10 +46,10 @@ class Stepper : public Module {
         int config_step_timer( int cycles );
 
         Block* current_block;
-        int64_t counters[3];
-        int64_t stepped[3]; 
-        int64_t offsets[3]; 
-        int step_events_completed; 
+        uint64_t counters[3];
+        uint64_t stepped[3]; 
+        uint64_t offsets[3]; 
+        uint64_t step_events_completed; 
         unsigned int out_bits; 
         double trapezoid_adjusted_rate;
         int trapezoid_tick_cycle_counter;
