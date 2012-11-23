@@ -90,6 +90,7 @@ void Configurator::config_set_command( string parameters, StreamOutput* stream )
         setting = source;
         source = "";
         this->kernel->config->set_string(setting, value);
+        this->kernel->call_event(ON_CONFIG_RELOAD);
         stream->printf( "live: %s has been set to %s\r\n", setting.c_str(), value.c_str() );
     } else {
         uint16_t source_checksum = get_checksum(source);
